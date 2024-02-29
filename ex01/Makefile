@@ -10,11 +10,12 @@
 #																			  #
 # **************************************************************************** #
 
-NAME = Templates
+NAME = SpanCalc
 
 # SOURCES
 SRC_PATH =	src/
-SRC_FILES =	main.cpp
+SRC_FILES =	Span.cpp \
+			main.cpp
 SRCS := $(addprefix $(SRC_PATH), $(SRC_FILES))
 
 # OBJECTS
@@ -23,7 +24,7 @@ OBJS = $(addprefix $(OBJ_PATH), $(SRC_FILES:.cpp=.o))
 
 # INCLUDES
 INCL_PATH =	include/
-HDRS = 		Templates.hpp
+HDRS = 		Span.hpp
 INCLDS := $(addprefix $(INCL_PATH), $(HDRS))
 
 # COMPILATION CMNDS
