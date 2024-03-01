@@ -6,7 +6,7 @@
 /*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:58:10 by jschott           #+#    #+#             */
-/*   Updated: 2024/02/28 17:44:02 by jschott          ###   ########.fr       */
+/*   Updated: 2024/03/01 09:54:18 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include "easyfind.hpp"
 
 int	main(){
-	std::vector<int> stuff;
+	std::vector<int> haystack;
 
 	std::cout << "Welcome to easyfind!" << std::endl;
 	std::cout << "Enter " << TEXT_BOLD << "EXIT" << TEXT_NOFORMAT << " to exit."<< std::endl;
@@ -34,19 +34,19 @@ int	main(){
 		std::cout << "When finished enter " << TEXT_BOLD 
 			<< "DONE" << TEXT_NOFORMAT << "." << std::endl;
 		while (input != "DONE"){
-			for (std::vector<int>::iterator pos = stuff.begin(); pos != stuff.end(); pos++){
+			for (std::vector<int>::iterator pos = haystack.begin(); pos != haystack.end(); pos++){
 				std::cout << "[" << *pos << "]";
 			}
 			std::cout << " ";
 			std::getline(std::cin, input);
 			if (std::atoi(input.c_str()) || input == "0")
-				stuff.push_back(std::atoi(input.c_str()));
+				haystack.push_back(std::atoi(input.c_str()));
 		}
 		input = "";
 
 		//OUTPUT
-		std::cout << std::endl << "Created int container of length " << stuff.size() << std::endl;
-		for (std::vector<int>::iterator pos = stuff.begin(); pos != stuff.end(); pos++){
+		std::cout << std::endl << "Created int container of length " << haystack.size() << std::endl;
+		for (std::vector<int>::iterator pos = haystack.begin(); pos != haystack.end(); pos++){
 			std::cout << "[" << *pos << "]";
 		}
 		std::cout << std::endl;
@@ -56,12 +56,13 @@ int	main(){
 			<< "integer" << TEXT_NOFORMAT << " to search in the container" << std::endl;
 		std::cout << "When finished enter " << TEXT_BOLD 
 			<< "DONE" << TEXT_NOFORMAT << "." << std::endl;
+		#include "easyfind.hpp"
+
 		while (input != "DONE"){
 			std::getline(std::cin, input);
 			if (std::atoi(input.c_str()) || input == "0"){
 				try{
-					easyfind(stuff, std::atoi(input.c_str()));
-					std::cout << COLOR_SUCCESS << "Found it!" << COLOR_STANDARD << std::endl;
+					easyfind(haystack, std::atoi(input.c_str()));
 				}
 				catch(const std::exception& e){
 					std::cerr << COLOR_ERROR << e.what() << COLOR_STANDARD << std::endl;

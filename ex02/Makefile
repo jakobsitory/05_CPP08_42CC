@@ -10,7 +10,7 @@
 #																			  #
 # **************************************************************************** #
 
-NAME = Templates
+NAME = MutantStack
 
 # SOURCES
 SRC_PATH =	src/
@@ -23,7 +23,7 @@ OBJS = $(addprefix $(OBJ_PATH), $(SRC_FILES:.cpp=.o))
 
 # INCLUDES
 INCL_PATH =	include/
-HDRS = 		Templates.hpp
+HDRS = 		MutantStack.hpp
 INCLDS := $(addprefix $(INCL_PATH), $(HDRS))
 
 # COMPILATION CMNDS

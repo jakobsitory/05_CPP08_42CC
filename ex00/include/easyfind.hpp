@@ -6,7 +6,7 @@
 /*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:57:40 by jschott           #+#    #+#             */
-/*   Updated: 2024/02/28 17:29:42 by jschott          ###   ########.fr       */
+/*   Updated: 2024/03/01 09:04:38 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@
 class NotFoundExeption : public std::exception {
 public:
 	virtual const char *what() const throw(){
-		return "not found";
+		return "EasyFind: Integer Not found";
 	}
 };
 
 template <typename T>
-typename T::iterator easyfind(T arg, int num){
-	typename T::iterator pos;
-	pos = find(arg.begin(), arg.end(), num);
-	if (pos == arg.end())
+void easyfind(const T& haystack, int num){
+	typename T::const_iterator needle;
+	needle = find(haystack.begin(), haystack.end(), num);
+	if (needle == haystack.end())
 		throw NotFoundExeption();
-	return (pos);
+	std::cout << COLOR_SUCCESS << "Found it!" << COLOR_STANDARD << std::endl;
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 11:58:10 by jschott           #+#    #+#             */
-/*   Updated: 2024/02/29 18:16:56 by jschott          ###   ########.fr       */
+/*   Updated: 2024/03/01 09:29:09 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int	main(){
 					stuff->addNumber((rand() - rand()) % 10000 );
 				std::cout << COLOR_SUCCESS << "SUCCESS! " << COLOR_STANDARD << std::endl << *stuff << std::endl;
 
+				// DO CONTAINER OPERATIONS
 				std::cout << std::endl << "Enter " << std::endl << TEXT_BOLD 
 					<< "\tan integer" << TEXT_NOFORMAT << " to add it to container." << std::endl << TEXT_BOLD 
 					<< "\tSHORT" << TEXT_NOFORMAT << " to get shortest span between two container elements." << std::endl << TEXT_BOLD 
@@ -97,10 +98,7 @@ int	main(){
 			}
 			catch(const std::exception& e){
 				std::cerr << COLOR_ERROR << e.what() << COLOR_STANDARD << std::endl;
-			}
-			
-
-			
+			}		
 		}
 		catch(const std::exception& e){
 			std::cerr << COLOR_ERROR << e.what() << COLOR_STANDARD << std::endl;

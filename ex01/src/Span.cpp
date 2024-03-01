@@ -6,7 +6,7 @@
 /*   By: jschott <jschott@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:54:02 by jschott           #+#    #+#             */
-/*   Updated: 2024/02/29 18:20:12 by jschott          ###   ########.fr       */
+/*   Updated: 2024/03/01 09:24:31 by jschott          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ std::ostream& operator<<(std::ostream& os, Span const & object){
 	std::list<int> tmp = object.getStorage();
 	for (std::list<int>::iterator it = tmp.begin();
 			it != tmp.end(); it++)
-		os << "[ " << *it << " ]";
+		os << "[" << *it << "]";
 	for (int i = tmp.size(); i < object.getMaxSize(); i++)
 	 	os << "[ ]";
 	return os;
