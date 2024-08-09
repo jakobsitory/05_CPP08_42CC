@@ -37,7 +37,8 @@ To install the project, follow these steps:
 
 1. Clone the repository: **`git clone git@github.com:jakobsitory/05_CPP08_42CC.git`**
 2. Navigate to the project directory: **`cd 05_CPP08_42CC`**
-3. Build the project: **`make`**
+3. Navigate to the exercise directory : **`cd ex00`**,  **`cd ex01`** ...
+4. Build the project: **`make`**
 
 ## **Usage**
 _Follow the on-screen instructions to test the programs._
