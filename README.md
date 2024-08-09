@@ -2,7 +2,7 @@
 
 This repository contains solutions to various C++ programming challenges from the 42 School curriculum. Each module is designed to deepen students' understanding of different programming concepts and techniques.
 
-## **Modules**
+## **Exercises**
 
 ### **ex00 - Easy find**
 A function template to find an element in a container.
